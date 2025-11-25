@@ -1,36 +1,36 @@
 name: Release
 
 on:
-  push:
-    tags:
-      - v**
+    push:
+        tags:
+            - v**
 
 permissions:
-  contents: write
+    contents: write
 
 jobs:
-  release:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+    release:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v4
+              with:
+                  token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
+            - name: Setup Node.js
+              uses: actions/setup-node@v4
+              with:
+                  node-version: 20
 
-      - name: Install deps
-        run: npm install
+            - name: Install deps
+              run: npm install
 
-      - name: Build
-        run: npm run build
+            - name: Build
+              run: npm run build
 
       - name: Create Release and Upload XPI
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.PAT_TOKEN }}
         run: |
           gh release create ${{ github.ref_name }} \
             .scaffold/build/*.xpi \
