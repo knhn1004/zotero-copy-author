@@ -12,9 +12,9 @@ A Zotero 7 plugin to quickly copy author names and LaTeX citations from selected
 
 ## Keyboard Shortcuts
 
-| Action | Mac | Windows/Linux |
-|--------|-----|---------------|
-| Copy Authors | `Cmd+Shift+A` | `Ctrl+Shift+A` |
+| Action              | Mac           | Windows/Linux  |
+| ------------------- | ------------- | -------------- |
+| Copy Authors        | `Cmd+Shift+A` | `Ctrl+Shift+A` |
 | Copy LaTeX Citation | `Cmd+Shift+L` | `Ctrl+Shift+L` |
 
 You can also access these functions via right-click context menu on selected items.
@@ -34,6 +34,7 @@ You can also access these functions via right-click context menu on selected ite
 ## Usage
 
 ### Copy Authors
+
 1. Select one or more items in your Zotero library
 2. Press `Cmd+Shift+A` (Mac) or `Ctrl+Shift+A` (Windows/Linux)
 3. Author names are copied to clipboard in format:
@@ -43,6 +44,7 @@ You can also access these functions via right-click context menu on selected ite
    - Multiple items separated by `;`
 
 ### Copy LaTeX Citation
+
 1. Select one or more items in your Zotero library
 2. Press `Cmd+Shift+L` (Mac) or `Ctrl+Shift+L` (Windows/Linux)
 3. Citation is copied as `\cite{key1,key2,...}`
