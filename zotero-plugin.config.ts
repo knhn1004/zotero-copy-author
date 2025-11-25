@@ -23,7 +23,11 @@ export default defineConfig({
       buildVersion: pkg.version,
       buildTime: "{{buildTime}}",
     },
-    fluent: false,
+    fluent: {
+      prefixFluentMessages: false,
+      prefixLocaleFiles: false,
+      dts: false,
+    },
     prefs: {
       prefix: pkg.config.prefsPrefix,
     },
