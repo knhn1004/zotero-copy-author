@@ -1,7 +1,7 @@
 {
   "name": "zotero-copy-author",
   "type": "module",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Copy authors formatted or as LaTeX citation",
   "config": {
     "addonName": "Zotero Copy Author",
